@@ -45,7 +45,7 @@
       </aside>
     </section>
 
-    <section id="introduction"><h2>Introduction</h2><h1>Introduction</h1>
+    <section id="introduction"><h2></h2><h1>Introduction</h1>
 <p>Cryst4l is a **foundation framework**, not a design system.</p>
 <p>It gives you:</p>
 <ul>
@@ -61,7 +61,7 @@
 <li>a “framework look”</li>
 <li>a theme engine</li>
 </ul>
-<p>If you want quick visual polish, add a design system on top. If you want CSS that stays sane for years, start here.</p></section><section id="architecture"><h2>Architecture</h2><h1>Architecture</h1>
+<p>If you want quick visual polish, add a design system on top. If you want CSS that stays sane for years, start here.</p></section><section id="architecture"><h2></h2><h1>Architecture</h1>
 <p>Cryst4l follows **ITCSS**, implemented natively via CSS <code>@layer</code>.</p>
 <pre><code>
 @layer reset, settings, base, objects, components, utilities;
@@ -72,7 +72,7 @@
 <li>strict rules</li>
 <li>a defined place in the cascade</li>
 </ul>
-<p>Result: fewer specificity hacks, fewer “where is this coming from?” moments.</p></section><section id="layers"><h2>Layers</h2><h1>Layers</h1>
+<p>Result: fewer specificity hacks, fewer “where is this coming from?” moments.</p></section><section id="layers"><h2></h2><h1>Layers</h1>
 <p>Cryst4l ships six layers (in order):</p>
 <h2>Reset</h2>
 <p>Browser normalisation only. No classes. No opinions.</p>
@@ -85,7 +85,7 @@
 <h2>Components</h2>
 <p>Semantic structure without forced styling (<code>c-*</code>).</p>
 <h2>Utilities</h2>
-<p>Single-purpose overrides (<code>u-*</code>). Allowed to use <code>!important</code>.</p></section><section id="objects"><h2>Objects</h2><h1>Objects</h1>
+<p>Single-purpose overrides (<code>u-*</code>). Allowed to use <code>!important</code>.</p></section><section id="objects"><h2></h2><h1>Objects</h1>
 <p>Objects are **layout-only** primitives: reusable, context-free, and structural.</p>
 <p>Included objects:</p>
 <ul>
@@ -105,7 +105,7 @@
 <li>no colours</li>
 <li>no typography</li>
 <li>no theme assumptions</li>
-</ul></section><section id="components"><h2>Components</h2><h1>Components</h1>
+</ul></section><section id="components"><h2></h2><h1>Components</h1>
 <p>Components are **contracts**, not designs.</p>
 <p>They define:</p>
 <ul>
@@ -139,7 +139,7 @@
   &lt;/div&gt;
 &lt;/article&gt;
 </code></pre>
-<p>All visual decisions live in **utilities** or **tokens**.</p></section><section id="utilities"><h2>Utilities</h2><h1>Utilities</h1>
+<p>All visual decisions live in **utilities** or **tokens**.</p></section><section id="utilities"><h2></h2><h1>Utilities</h1>
 <p>Utilities are **explicit overrides**: local, single-purpose, and predictable.</p>
 <p>Cryst4l supports two tiers.</p>
 <h2>Tier 1 — Classic responsive utilities</h2>
@@ -167,7 +167,7 @@
 <li>you want fast spacing/type tweaks</li>
 <li>you want fluid scaling “for free”</li>
 </ul>
-<p>You can use either tier or both.</p></section><section id="tokens-theming"><h2>Tokens &amp; Theming</h2><h1>Tokens &amp; Theming</h1>
+<p>You can use either tier or both.</p></section><section id="tokens-theming"><h2></h2><h1>Tokens &amp; Theming</h1>
 <p>Tokens live in:</p>
 <ul>
 <li><code>source/css/_1-settings/_variables.css</code> (framework source)</li>
@@ -188,7 +188,7 @@
   --text-color: #eee;
 }
 </code></pre>
-<p>This keeps your components portable and your CSS small.</p></section><section id="media-container-queries"><h2>Media &amp; Container Queries</h2><h1>Media &amp; Container Queries</h1>
+<p>This keeps your components portable and your CSS small.</p></section><section id="media-container-queries"><h2></h2><h1>Media &amp; Container Queries</h1>
 <h2>Media queries</h2>
 <p>Use literal values:</p>
 <pre><code>
@@ -208,7 +208,7 @@
   &lt;div class=&quot;o-grid__item u-cq-1/2@md-up&quot;&gt;…&lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
-<p>Cryst4l’s CQ utilities mirror the <code>@*-up</code> suffix convention.</p></section><section id="composition-patterns"><h2>Composition Patterns</h2><h1>Composition Patterns</h1>
+<p>Cryst4l’s CQ utilities mirror the <code>@*-up</code> suffix convention.</p></section><section id="composition-patterns"><h2></h2><h1>Composition Patterns</h1>
 <p>Cryst4l is designed for **composition**.</p>
 <p>A common pattern:</p>
 <ul>
@@ -233,7 +233,7 @@
     &lt;button class=&quot;c-button u-px-3 u-py-2 u-border&quot;&gt;Action&lt;/button&gt;
   &lt;/footer&gt;
 &lt;/article&gt;
-</code></pre></section><section id="lean-builds"><h2>Lean Builds</h2><h1>Lean Builds</h1>
+</code></pre></section><section id="lean-builds"><h2></h2><h1>Lean Builds</h1>
 <p>Cryst4l is modular by design: ship only what you use.</p>
 <h2>A) Lean entry file</h2>
 <p>Create <code>styles.build.css</code>:</p>
@@ -255,7 +255,7 @@
 @import url(&quot;./_7-utilities/helpers/_widths.css&quot;) layer(utilities);
 @import url(&quot;./_7-utilities/helpers/_margins.css&quot;) layer(utilities);
 @import url(&quot;./_7-utilities/helpers/_padding.css&quot;) layer(utilities);
-</code></pre></section><section id="design-philosophy"><h2>Design Philosophy</h2><h1>Design Philosophy</h1>
+</code></pre></section><section id="design-philosophy"><h2></h2><h1>Design Philosophy</h1>
 <p>Cryst4l follows one rule:</p>
 <blockquote><p>If you add styling to a component, stop.</p></blockquote>
 <blockquote><p>If you add structure to a utility, stop.</p></blockquote>
