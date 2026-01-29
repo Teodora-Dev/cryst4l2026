@@ -1,0 +1,85 @@
+/* -------------------------------------------------------------------------- */
+/* Cryst4l core components (structure-only, no visual opinion)                */
+/* -------------------------------------------------------------------------- */
+
+@layer components {
+
+  /* Box / surface */
+  .c-box {
+    padding: var(--space-4, 1rem);
+    background: var(--surface-bg, transparent);
+    color: inherit;
+  }
+
+  /* Stack (vertical rhythm) */
+  .c-stack {
+    display: flex;
+    flex-direction: column;
+    gap: var(--stack-gap, var(--space-3));
+  }
+  .c-stack--tight { --stack-gap: var(--space-2); }
+  .c-stack--loose { --stack-gap: var(--space-5); }
+
+  /* Cluster (inline grouping) */
+  .c-cluster {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--cluster-gap, var(--space-2));
+    align-items: center;
+  }
+
+  /* Card (layout-only) */
+  .c-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--card-gap, var(--space-3));
+  }
+
+  /* Media object */
+  .c-media {
+    display: flex;
+    gap: var(--media-gap, var(--space-3));
+    align-items: flex-start;
+  }
+  .c-media__figure { flex-shrink: 0; }
+  .c-media__body { flex: 1; }
+
+  /* Switcher (no breakpoints, container-friendly) */
+  .c-switcher {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--switcher-gap, var(--space-3));
+  }
+  .c-switcher > * {
+    flex-grow: 1;
+    flex-basis: calc((var(--switcher-threshold, 30rem) - 100%) * 999);
+  }
+
+  /* Button (unstyled) */
+  .c-button {
+    font: inherit;
+    background: none;
+    border: none;
+    padding: 0;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  /* List reset */
+  .c-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: var(--list-gap, var(--space-2));
+  }
+
+  /* Disclosure (details/summary helper) */
+  .c-disclosure > summary {
+    cursor: pointer;
+    list-style: none;
+  }
+  .c-disclosure > summary::-webkit-details-marker {
+    display: none;
+  }
+}

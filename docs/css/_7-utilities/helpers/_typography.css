@@ -1,0 +1,21 @@
+/* Typography utilities (optional)
+   Uses the fluid scale tokens from _1-settings/_variables.css
+*/
+
+.u-fs--2{ font-size: var(--fs--2) !important; }
+.u-fs--1{ font-size: var(--fs--1) !important; }
+.u-fs-0{  font-size: var(--fs-0)  !important; }
+.u-fs-1{  font-size: var(--fs-1)  !important; }
+.u-fs-2{  font-size: var(--fs-2)  !important; }
+.u-fs-3{  font-size: var(--fs-3)  !important; }
+.u-fs-4{  font-size: var(--fs-4)  !important; }
+.u-fs-5{  font-size: var(--fs-5)  !important; }
+
+/* Line-height helpers */
+.u-lh-tight{ line-height: 1.15 !important; }
+.u-lh-snug{  line-height: 1.30 !important; }
+.u-lh-normal{line-height: 1.50 !important; }
+.u-lh-relaxed{line-height: 1.70 !important; }
+
+/* A nice default "flow" rhythm for rich text blocks */
+.u-flow > * + *{ margin-block-start: var(--space-3) !important; }

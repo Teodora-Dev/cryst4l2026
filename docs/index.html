@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cryst4l — Pure CSS ITCSS Framework (2026)</title>
+
+  <!-- Cryst4l framework (modular). This imports its own layered modules. -->
+  <link rel="stylesheet" href="./css/styles.css" />
+
+  <!-- Docs-only styles -->
+  <link rel="stylesheet" href="./docs.css" />
+
+  <style>
+    /* Smooth anchors (tiny inline so it works even if docs.css is removed) */
+    html{ scroll-behavior: smooth; }
+    :target{ scroll-margin-top: 90px; }
+  </style>
+</head>
+
+<body>
+  <header class="docs-topbar">
+    <div class="docs-topbar-inner">
+      <div class="docs-brand">
+        <strong>Cryst4l</strong>
+        <span>Pure CSS • ITCSS via <code>@layer</code> • 2026 modernised</span>
+      </div>
+
+      <nav class="docs-nav" aria-label="Docs navigation">
+        <a href="#start">Start</a>
+        <a href="#layers">Layers</a>
+        <a href="#tokens">Tokens</a>
+        <a href="#grid">Grid</a>
+        <a href="#utilities">Utilities</a>
+        <a href="#cq">Container queries</a>
+        <a href="#presets">Lean builds</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="docs-shell">
+    <section class="docs-hero" id="start">
+      <div>
+        <h1>Your old ITCSS brain, but modern CSS.</h1>
+        <p>
+          Cryst4l is a pure-CSS rewrite of your original Sass starter, keeping the same ITCSS structure
+          while using native <code>@layer</code>, custom properties (tokens), fluid scales, and optional container-query utilities.
+        </p>
+
+        <div class="docs-pillrow" aria-label="Highlights">
+          <span class="docs-pill">ITCSS structure preserved</span>
+          <span class="docs-pill"><code>@layer</code> ordered cascade</span>
+          <span class="docs-pill">No Sass required</span>
+          <span class="docs-pill">Fluid type + spacing tokens</span>
+          <span class="docs-pill">CQ helpers mirror your suffix naming</span>
+        </div>
+
+        <h3>Quick start</h3>
+        <pre><code>&lt;link rel="stylesheet" href="/path/to/cryst4l/source/css/styles.css"&gt;</code></pre>
+
+        <p>
+          That’s it — <code>styles.css</code> imports each module into the correct layer using:
+          <code>@import url("...") layer(utilities);</code>
+        </p>
+      </div>
+
+      <aside class="docs-card">
+        <h3>Folder map (modular)</h3>
+        <pre><code>source/css/
+  styles.css
+  _1-settings/_variables.css
+  _3-resets/_normalize.css
+  _4-base/_base.css
+  _5-objects/_wrappers.css
+  _5-objects/_grid.css
+  _6-components/_components.css
+  _7-utilities/_utilities.css
+  _7-utilities/helpers/*.css</code></pre>
+
+        <p style="margin-top: 0.75rem;">
+          Tip: For production, you can keep it modular or bundle it via your build tool (optional).
+        </p>
+      </aside>
+    </section>
+
+    <section id="layers">
+      <h2>Layers (ITCSS, now native)</h2>
+      <p>
+        Cryst4l uses a fixed layer order so you get predictable overrides without specificity wars.
+      </p>
+
+      <pre><code>@layer reset, settings, base, objects, components, utilities;</code></pre>
+
+      <div class="docs-card">
+        <h3>What goes where</h3>
+        <ul>
+          <li><strong>reset</strong> — minimal reset and sensible defaults</li>
+          <li><strong>settings</strong> — tokens: colour, spacing, typography, breakpoints</li>
+          <li><strong>base</strong> — element styling (type, links, forms)</li>
+          <li><strong>objects</strong> — layout primitives (wrappers, grid)</li>
+          <li><strong>components</strong> — UI components (kept as a placeholder layer)</li>
+          <li><strong>utilities</strong> — single-purpose helpers with <code>!important</code></li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="tokens">
+      <h2>Tokens (custom properties)</h2>
+      <p>
+        Tokens live in <code>_1-settings/_variables.css</code>. You can theme by overriding tokens —
+        usually you don’t need new classes.
+      </p>
+
+      <h3>Fluid type scale</h3>
+      <pre><code>:root {
+  --fs-0:  clamp(1rem, 0.94rem + 0.40vw, 1.12rem);
+  --fs-3:  clamp(1.52rem, 1.30rem + 1.10vw, 2.05rem);
+}</code></pre>
+
+      <div class="docs-card">
+        <h3>Utility wrappers for tokens</h3>
+        <p>Optional helpers (utilities) you can use directly:</p>
+        <pre><code>&lt;h2 class="u-fs-3 u-lh-tight"&gt;A nice headline&lt;/h2&gt;
+&lt;div class="u-flow"&gt;
+  &lt;p&gt;Paragraph 1&lt;/p&gt;
+  &lt;p&gt;Paragraph 2&lt;/p&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="grid">
+      <h2>Objects: wrappers + grid</h2>
+
+      <h3>Wrappers</h3>
+      <pre><code>&lt;div class="o-wrapper"&gt;...&lt;/div&gt;
+&lt;div class="o-wrapper o-wrapper--wide"&gt;...&lt;/div&gt;</code></pre>
+
+      <h3>Grid</h3>
+      <p>
+        The grid keeps your familiar class API: <code>o-grid</code>, <code>o-grid__item</code>, and width fractions like
+        <code>u-1/2</code> (including responsive suffixes).
+      </p>
+
+      <pre><code>&lt;div class="o-grid"&gt;
+  &lt;div class="o-grid__item u-1/2@md-up"&gt;Half&lt;/div&gt;
+  &lt;div class="o-grid__item u-1/2@md-up"&gt;Half&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <div class="docs-grid-demo">
+        <div class="u-1/2@md-up">
+          <div class="docs-demo-box">u-1/2@md-up</div>
+        </div>
+        <div class="u-1/2@md-up">
+          <div class="docs-demo-box">u-1/2@md-up</div>
+        </div>
+      </div>
+
+      <p>
+        Push/pull helpers are still there (<code>u-push-*</code>, <code>u-pull-*</code>) and remain <code>position: relative</code>-based offsets.
+      </p>
+    </section>
+
+    <section id="utilities">
+      <h2>Utilities</h2>
+      <p>
+        Utilities are split into helpers under <code>_7-utilities/helpers</code> and imported via <code>_utilities.css</code>.
+      </p>
+
+      <div class="docs-card">
+        <h3>Common ones</h3>
+        <ul>
+          <li>Spacing: <code>u-margin-*</code>, <code>u-padding-*</code> (+ responsive variants)</li>
+          <li>Fractions: <code>u-1/2</code>, <code>u-2/3</code>, etc (+ responsive variants)</li>
+          <li>Quick tokens: <code>u-gap-*</code>, <code>u-px-*</code>, <code>u-mb-*</code> (uses <code>--space-*</code>)</li>
+          <li>Helpers: clearfix, hidden/show, colours, borders, buttons</li>
+        </ul>
+
+        <h3>Example</h3>
+        <pre><code>&lt;div class="u-p-4 u-mb-4"&gt;
+  &lt;button class="u-button"&gt;Button helper&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+      </div>
+    </section>
+
+    <section id="cq">
+      <h2>Container queries (optional utilities)</h2>
+      <p>
+        Container queries let components respond to their own container width, not the viewport.
+        Cryst4l includes CQ helpers that mirror your breakpoint suffix style.
+      </p>
+
+      <pre><code>&lt;div class="u-container o-grid"&gt;
+  &lt;div class="o-grid__item u-cq-1/2@md-up"&gt;Half when container ≥ md&lt;/div&gt;
+  &lt;div class="o-grid__item u-cq-1/2@md-up"&gt;Half when container ≥ md&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+
+      <div class="docs-card">
+        <h3>What you get</h3>
+        <ul>
+          <li><code>.u-container</code> + named containers (<code>.u-container-card</code>, etc)</li>
+          <li>Visibility: <code>.u-show@md-up</code> / <code>.u-hide@lg-up</code> (container-based)</li>
+          <li>Fractions: <code>.u-cq-1/2@sm-up</code>, <code>.u-cq-2/3@lg-up</code>, etc</li>
+          <li>Layout helper: <code>.u-cq-row</code> + <code>.u-cq-row@md</code>/<code>@lg</code> (stack → row)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="presets">
+      <h2>Lean builds (recommended)</h2>
+      <p>
+        If you don’t need every helper, you can ship a smaller bundle by importing only what you use.
+        Here are two practical approaches.
+      </p>
+
+      <h3>A) Utilities preset file</h3>
+      <p>Create a file like <code>utilities.build.css</code> and import only the helpers you want:</p>
+      <pre><code>/* utilities.build.css */
+@layer utilities;
+
+@import url("./_7-utilities/helpers/_widths.css") layer(utilities);
+@import url("./_7-utilities/helpers/_margins.css") layer(utilities);
+@import url("./_7-utilities/helpers/_padding.css") layer(utilities);
+/* skip colours/borders/buttons if unused */</code></pre>
+
+      <h3>B) Minimal entrypoint</h3>
+      <p>
+        Make a lean entry file for production (still respects the same layer order):
+      </p>
+      <pre><code>/* styles.build.css */
+@layer reset, settings, base, objects, components, utilities;
+
+@import url("./_3-resets/_normalize.css") layer(reset);
+@import url("./_1-settings/_variables.css") layer(settings);
+@import url("./_4-base/_base.css") layer(base);
+@import url("./_5-objects/_wrappers.css") layer(objects);
+@import url("./_5-objects/_grid.css") layer(objects);
+/* import only selected utilities */</code></pre>
+
+      <div class="docs-card">
+        <h3>Rule of thumb</h3>
+        <p>
+          Start lean, add helpers as-needed. Keeping utilities modular is the whole point of the folder split.
+        </p>
+      </div>
+    </section>
+
+    <footer class="docs-footer">
+      <p>
+        Generated 2026-01-29. If you want, I can also add:
+        a copy-paste “cheatsheet” section, a tiny search, or auto-generated docs from the helper files.
+      </p>
+    </footer>
+  </main>
+</body>
+</html>

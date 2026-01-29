@@ -1,0 +1,17 @@
+/* Cryst4l Base (type + elements) */
+
+body{
+  font-family:var(--font-primary);
+  font-size:var(--text-sm);
+  line-height:var(--line-height);
+  color:var(--color-dark);
+  background: #fff;
+}
+a{color:var(--color-primary);text-decoration:none;}
+a:hover{text-decoration:underline;}
+h1,h2,h3,h4,h5,h6{font-family:var(--font-secondary);margin:0 0 var(--space-0_5);}
+p{margin:0 0 var(--space-1);}
+:focus-visible{outline:2px solid var(--color-primary);outline-offset:2px;}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important;}
+}

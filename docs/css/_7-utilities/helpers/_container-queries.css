@@ -1,0 +1,112 @@
+/* Container query utilities (optional)
+   How to use:
+   1) Put `.u-container` on a parent you want to query (or `.u-container-inline`).
+   2) Use the `u-cq-*` helpers on elements inside that container.
+
+   Breakpoints used below:
+   xs: 420px, sm: 520px, md: 720px, lg: 920px
+   (Mirrored as tokens in :root for documentation: --cq-*)
+*/
+
+/* Make an element a query container */
+.u-container{ container-type: inline-size !important; }
+.u-container-inline{ container-type: inline-size !important; }
+.u-container-size{ container-type: size !important; }
+
+/* Named containers (handy when nested) */
+.u-container-card{ container: card / inline-size !important; }
+.u-container-panel{ container: panel / inline-size !important; }
+.u-container-layout{ container: layout / inline-size !important; }
+
+/* Stack → row patterns */
+.u-cq-row{ display: flex !important; flex-direction: column !important; gap: var(--space-3, 1rem) !important; }
+@container (min-width: 720px){
+  .u-cq-row\@md{ flex-direction: row !important; align-items: flex-start !important; }
+}
+@container (min-width: 920px){
+  .u-cq-row\@lg{ flex-direction: row !important; align-items: flex-start !important; }
+}
+
+/* Visibility helpers based on container width */
+@container (max-width: 519.98px){
+  .u-hide\@cq-sm{ display: none !important; }
+}
+@container (min-width: 520px){
+  .u-show\@cq-sm{ display: initial !important; }
+}
+@container (min-width: 720px){
+  .u-hide\@cq-md{ display: none !important; }
+  .u-show\@cq-md{ display: initial !important; }
+}
+@container (min-width: 920px){
+  .u-hide\@cq-lg{ display: none !important; }
+  .u-show\@cq-lg{ display: initial !important; }
+}
+
+/* Container-aware widths
+
+/* Container-query visibility helpers using @<bp>-up naming */
+@container (min-width: 420px){
+  .u-hide\@xs-up{ display: none !important; }
+  .u-show\@xs-up{ display: initial !important; }
+}
+@container (min-width: 520px){
+  .u-hide\@sm-up{ display: none !important; }
+  .u-show\@sm-up{ display: initial !important; }
+}
+@container (min-width: 720px){
+  .u-hide\@md-up{ display: none !important; }
+  .u-show\@md-up{ display: initial !important; }
+}
+@container (min-width: 920px){
+  .u-hide\@lg-up{ display: none !important; }
+  .u-show\@lg-up{ display: initial !important; }
+}
+/* Container-query equivalents of width fractions (mirrors .u-1/2@md-up etc) */
+@container (min-width: 420px){
+  .u-cq-1\/2\@xs-up{ width: 50% !important; }
+  .u-cq-1\/3\@xs-up{ width: 33.333% !important; }
+  .u-cq-2\/3\@xs-up{ width: 66.666% !important; }
+  .u-cq-1\/4\@xs-up{ width: 25% !important; }
+  .u-cq-3\/4\@xs-up{ width: 75% !important; }
+  .u-cq-1\/5\@xs-up{ width: 20% !important; }
+  .u-cq-2\/5\@xs-up{ width: 40% !important; }
+  .u-cq-3\/5\@xs-up{ width: 60% !important; }
+  .u-cq-4\/5\@xs-up{ width: 80% !important; }
+}
+
+@container (min-width: 520px){
+  .u-cq-1\/2\@sm-up{ width: 50% !important; }
+  .u-cq-1\/3\@sm-up{ width: 33.333% !important; }
+  .u-cq-2\/3\@sm-up{ width: 66.666% !important; }
+  .u-cq-1\/4\@sm-up{ width: 25% !important; }
+  .u-cq-3\/4\@sm-up{ width: 75% !important; }
+  .u-cq-1\/5\@sm-up{ width: 20% !important; }
+  .u-cq-2\/5\@sm-up{ width: 40% !important; }
+  .u-cq-3\/5\@sm-up{ width: 60% !important; }
+  .u-cq-4\/5\@sm-up{ width: 80% !important; }
+}
+
+@container (min-width: 720px){
+  .u-cq-1\/2\@md-up{ width: 50% !important; }
+  .u-cq-1\/3\@md-up{ width: 33.333% !important; }
+  .u-cq-2\/3\@md-up{ width: 66.666% !important; }
+  .u-cq-1\/4\@md-up{ width: 25% !important; }
+  .u-cq-3\/4\@md-up{ width: 75% !important; }
+  .u-cq-1\/5\@md-up{ width: 20% !important; }
+  .u-cq-2\/5\@md-up{ width: 40% !important; }
+  .u-cq-3\/5\@md-up{ width: 60% !important; }
+  .u-cq-4\/5\@md-up{ width: 80% !important; }
+}
+
+@container (min-width: 920px){
+  .u-cq-1\/2\@lg-up{ width: 50% !important; }
+  .u-cq-1\/3\@lg-up{ width: 33.333% !important; }
+  .u-cq-2\/3\@lg-up{ width: 66.666% !important; }
+  .u-cq-1\/4\@lg-up{ width: 25% !important; }
+  .u-cq-3\/4\@lg-up{ width: 75% !important; }
+  .u-cq-1\/5\@lg-up{ width: 20% !important; }
+  .u-cq-2\/5\@lg-up{ width: 40% !important; }
+  .u-cq-3\/5\@lg-up{ width: 60% !important; }
+  .u-cq-4\/5\@lg-up{ width: 80% !important; }
+}

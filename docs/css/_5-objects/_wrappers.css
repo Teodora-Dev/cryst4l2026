@@ -1,0 +1,15 @@
+/* Wrappers */
+
+/* Wrapper */
+.u-wrapper{
+  position:relative;
+  margin-left:auto;
+  margin-right:auto;
+  width:90%;
+}
+.u-wrapper--max-lg{max-width:var(--width-lg);}
+.u-wrapper--max-md{max-width:var(--width-md);}
+.u-wrapper--max-sm{max-width:var(--width-sm);}
+.u-wrapper--max-sl{max-width:var(--width-sl);}
+.u-wrapper--max-xs{max-width:var(--width-xs);}
+.u-wrapper--max-xt{max-width:var(--width-xt);}

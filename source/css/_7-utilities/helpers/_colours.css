@@ -1,0 +1,14 @@
+/* Colour helpers */
+
+/* Colours */
+.u-primary-colour{color:var(--color-primary);}
+.u-secondary-colour{color:var(--color-secondary);}
+.u-dark{color:var(--color-dark);}
+.u-light{color:var(--color-light);}
+.u-white{color:#fff;}
+
+.u-bg-primary{background:var(--color-primary);}
+.u-bg-secondary{background:var(--color-secondary);}
+.u-bg-dark{background:var(--color-dark);}
+.u-bg-light{background:var(--color-light);}
+.u-bg-white{background:#fff;}

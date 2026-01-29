@@ -1,0 +1,124 @@
+/* Docs-only polish (kept tiny on purpose) */
+:root{
+  --docs-max: 1100px;
+  --docs-border: color-mix(in oklab, currentColor 18%, transparent);
+}
+
+body{
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a{ text-underline-offset: 0.18em; }
+
+.docs-shell{ max-width: var(--docs-max); margin-inline: auto; padding: var(--space-6, 2rem) var(--space-4, 1.25rem); }
+
+.docs-topbar{
+  position: sticky; top: 0; z-index: 50;
+  backdrop-filter: blur(10px);
+  background: color-mix(in oklab, Canvas 70%, transparent);
+  border-bottom: 1px solid var(--docs-border);
+}
+
+.docs-topbar-inner{
+  max-width: var(--docs-max);
+  margin-inline: auto;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.docs-brand{ display: flex; flex-direction: column; gap: 0.1rem; }
+.docs-brand strong{ font-size: 1.05rem; line-height: 1.1; }
+.docs-brand span{ opacity: 0.75; font-size: 0.9rem; }
+
+.docs-nav{
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  font-size: 0.95rem;
+}
+.docs-nav a{
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+.docs-nav a:hover{
+  border-color: var(--docs-border);
+}
+
+h1{ font-size: var(--fs-5, 2.4rem); letter-spacing: -0.02em; line-height: 1.05; margin: 0 0 0.6rem; }
+h2{ font-size: var(--fs-3, 1.7rem); letter-spacing: -0.01em; margin: 2.2rem 0 0.75rem; }
+h3{ font-size: var(--fs-1, 1.2rem); margin: 1.4rem 0 0.5rem; }
+p{ margin: 0.6rem 0; }
+
+.docs-hero{
+  display: grid;
+  gap: var(--space-5, 1.5rem);
+  align-items: start;
+  grid-template-columns: 1.2fr 0.8fr;
+}
+@media (max-width: 920px){
+  .docs-hero{ grid-template-columns: 1fr; }
+}
+
+.docs-card{
+  border: 1px solid var(--docs-border);
+  border-radius: 16px;
+  padding: var(--space-4, 1.25rem);
+  background: color-mix(in oklab, Canvas 92%, transparent);
+}
+
+code, pre{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+pre{
+  border: 1px solid var(--docs-border);
+  border-radius: 14px;
+  padding: 1rem;
+  overflow: auto;
+  background: color-mix(in oklab, Canvas 94%, transparent);
+}
+kbd{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  border: 1px solid var(--docs-border);
+  background: color-mix(in oklab, Canvas 92%, transparent);
+}
+
+.docs-pillrow{ display:flex; flex-wrap: wrap; gap: 0.5rem; }
+.docs-pill{
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  border: 1px solid var(--docs-border);
+  font-size: 0.92rem;
+  opacity: 0.9;
+}
+
+.docs-grid-demo{
+  display: flex;
+  flex-wrap: wrap;
+  margin: -0.75rem 0 0;
+}
+.docs-grid-demo > *{
+  padding: 0.75rem;
+  box-sizing: border-box;
+}
+.docs-demo-box{
+  border: 1px dashed var(--docs-border);
+  border-radius: 14px;
+  padding: 1rem;
+  min-height: 4rem;
+  display: grid;
+  place-items: center;
+}
+
+.docs-footer{
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--docs-border);
+  opacity: 0.8;
+  font-size: 0.95rem;
+}

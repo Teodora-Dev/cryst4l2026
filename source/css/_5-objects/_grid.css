@@ -1,0 +1,35 @@
+/* Grid */
+
+/* Grid (API compatible with your 2015 grid, but modernised internals) */
+.o-grid{
+  min-width:100%;
+  margin:0;
+  padding:0;
+  list-style:none;
+  display:flex;
+  flex-wrap:wrap;
+  gap:0; /* gutters are handled via padding-left on items to preserve push/pull */
+  margin-left: calc(var(--grid-gutter) * -1);
+}
+.o-grid__item{
+  position:relative;
+  min-width:0;
+  width:100%;
+  padding-left: var(--grid-gutter);
+  vertical-align:top;
+  font-size:1rem;
+}
+
+/* Gutter modifiers */
+.o-grid--gutter-sm{margin-left: calc(var(--grid-gutter-sm) * -1);}
+.o-grid--gutter-sm > .o-grid__item{padding-left:var(--grid-gutter-sm);}
+.o-grid--gutter-lg{margin-left: calc(var(--grid-gutter-lg) * -1);}
+.o-grid--gutter-lg > .o-grid__item{padding-left:var(--grid-gutter-lg);}
+.o-grid--no-gutter{margin-left:0;}
+.o-grid--no-gutter > .o-grid__item{padding-left:0;}
+
+/* Alignment modifiers (flexbox) */
+.o-grid--center{justify-content:center;}
+.o-grid--bottom{align-items:flex-end;}
+.o-grid--reverse{flex-direction:row-reverse;}
+.o-grid--equal-height{align-items:stretch;}

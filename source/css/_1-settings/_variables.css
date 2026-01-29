@@ -1,0 +1,75 @@
+/* Cryst4l Settings (CSS custom properties / tokens) */
+
+:root{
+  /* colors */
+  --color-primary:#2e71f0;
+  --color-secondary:#f9bd34;
+  --color-dark:#293446;
+  --color-light:#f5f5f5;
+  --color-border:#d7d7d7;
+
+  /* typography */
+  --font-primary: texgyreherosregular, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-secondary: soleil, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+  --text-xxl:3.75rem; /* 60px */
+  --text-xl:3rem;    /* 48px */
+  --text-lg:1.3125rem; /* 21px */
+  --text-md:1.125rem;  /* 18px */
+  --text-sm:1rem;      /* 16px */
+  --text-xs:0.875rem;  /* 14px */
+  --text-xt:0.8125rem; /* 13px */
+
+  --line-height:1.6;
+  --space-1: calc(var(--line-height) * 1rem);
+  --space-0_5: calc(var(--space-1) / 2);
+
+  /* widths */
+  --width-lg:1170px;
+  --width-md:980px;
+  --width-sm:768px;
+  --width-sl:640px;
+  --width-xs:480px;
+  --width-xt:320px;
+
+  /* grid */
+  --grid-gutter: 1.5rem; /* default */
+  --grid-gutter-sm: 1rem;
+  --grid-gutter-lg: 2rem;
+
+  color-scheme: light dark;
+}
+
+/* -------------------------------------------------------------------------- */
+/* Fluid type + space scale (optional, 2026 upgrade)                           */
+/* These tokens are designed to be used by optional utilities in utilities/*   */
+/* -------------------------------------------------------------------------- */
+
+:root{
+  /* Fluid type scale */
+  --fs--2: clamp(0.72rem, 0.68rem + 0.20vw, 0.80rem);
+  --fs--1: clamp(0.84rem, 0.80rem + 0.30vw, 0.95rem);
+  --fs-0:  clamp(1.00rem, 0.94rem + 0.40vw, 1.12rem);  /* base */
+  --fs-1:  clamp(1.15rem, 1.06rem + 0.55vw, 1.35rem);
+  --fs-2:  clamp(1.32rem, 1.18rem + 0.80vw, 1.65rem);
+  --fs-3:  clamp(1.52rem, 1.30rem + 1.10vw, 2.05rem);
+  --fs-4:  clamp(1.74rem, 1.42rem + 1.55vw, 2.60rem);
+  --fs-5:  clamp(2.00rem, 1.56rem + 2.10vw, 3.30rem);
+
+  /* Fluid space scale (good for padding, margins, gaps) */
+  --space-0: 0;
+  --space-1: clamp(0.25rem, 0.22rem + 0.20vw, 0.35rem);
+  --space-2: clamp(0.50rem, 0.45rem + 0.30vw, 0.70rem);
+  --space-3: clamp(0.75rem, 0.68rem + 0.45vw, 1.05rem);
+  --space-4: clamp(1.00rem, 0.90rem + 0.60vw, 1.40rem);
+  --space-5: clamp(1.50rem, 1.30rem + 0.90vw, 2.10rem);
+  --space-6: clamp(2.00rem, 1.70rem + 1.30vw, 3.10rem);
+  --space-7: clamp(3.00rem, 2.40rem + 2.00vw, 4.50rem);
+
+  /* Container query breakpoints (documented; used as values in helpers) */
+  --cq-xs: 420px;
+  --cq-sm: 520px;
+  --cq-md: 720px;
+  --cq-lg: 920px;
+}
+
