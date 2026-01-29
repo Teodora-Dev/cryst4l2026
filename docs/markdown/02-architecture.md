@@ -1,5 +1,3 @@
-# Architecture
-
 Cryst4l follows **ITCSS**, implemented natively via CSS `@layer`.
 
 ```css

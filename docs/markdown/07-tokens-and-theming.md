@@ -1,5 +1,3 @@
-# Tokens & Theming
-
 Tokens live in:
 
 - `source/css/_1-settings/_variables.css` (framework source)

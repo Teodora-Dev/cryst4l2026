@@ -1,5 +1,3 @@
-# Design Philosophy
-
 Cryst4l follows one rule:
 
 > If you add styling to a component, stop.  

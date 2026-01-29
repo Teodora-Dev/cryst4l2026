@@ -1,5 +1,3 @@
-# Layers
-
 Cryst4l ships six layers (in order):
 
 ## Reset
