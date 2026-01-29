@@ -30,19 +30,6 @@ Include the framework entry file:
 @layer reset, settings, base, objects, components, utilities;
 ```
 
-## Docs (GitHub Pages)
-
-This repo ships a self-contained docs site in `/docs`.
-
-To publish it with **GitHub Pages**:
-1. Push this repo to GitHub
-2. Go to **Settings → Pages**
-3. Under **Build and deployment**, set:
-   - Source: **Deploy from a branch**
-   - Branch: `main` (or `master`)
-   - Folder: **/docs**
-4. Save — GitHub will publish the docs site.
-
 ## Notes on breakpoints and variables
 
 CSS custom properties **cannot** be used inside `@media` or `@container` conditions (e.g. `min-width: var(--bp-md)`).
