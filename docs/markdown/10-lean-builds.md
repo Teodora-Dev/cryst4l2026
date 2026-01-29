@@ -1,3 +1,5 @@
+# Lean Builds
+
 Cryst4l is modular by design: ship only what you use.
 
 ## A) Lean entry file

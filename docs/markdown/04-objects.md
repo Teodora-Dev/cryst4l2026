@@ -1,3 +1,5 @@
+# Objects
+
 Objects are **layout-only** primitives: reusable, context-free, and structural.
 
 Included objects:

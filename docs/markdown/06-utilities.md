@@ -1,3 +1,5 @@
+# Utilities
+
 Utilities are **explicit overrides**: local, single-purpose, and predictable.
 
 Cryst4l supports two tiers.

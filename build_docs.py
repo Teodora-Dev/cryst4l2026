@@ -154,7 +154,6 @@ def main():
     <section class="docs-hero" id="start">
       <div>
         <h1>Cryst4l Documentation</h1>
-        <p>Source of truth lives in <code>docs/markdown</code>. Run <code>python3 build_docs.py</code> to regenerate this page.</p>
         <div class="docs-pillrow">
           <span class="docs-pill">Pure CSS</span>
           <span class="docs-pill">ITCSS via <code>@layer</code></span>
@@ -170,7 +169,7 @@ def main():
       </aside>
     </section>
 
-    {''.join([f'<section id="{sid}"><h2>{html.escape(title)}</h2>{body}</section>' for sid,title,body in sections])}
+    {''.join([f'<section id="{sid}">{body}</section>' for sid,title,body in sections])}
 
     <footer class="docs-footer">
       <p>Built from Markdown on {today}.</p>

@@ -1,3 +1,5 @@
+# Components
+
 Components are **contracts**, not designs.
 
 They define:

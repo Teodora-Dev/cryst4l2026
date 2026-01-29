@@ -1,3 +1,5 @@
+# Introduction
+
 Cryst4l is a **foundation framework**, not a design system.
 
 It gives you:

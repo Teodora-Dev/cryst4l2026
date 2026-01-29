@@ -1,3 +1,5 @@
+# Composition Patterns
+
 Cryst4l is designed for **composition**.
 
 A common pattern:
