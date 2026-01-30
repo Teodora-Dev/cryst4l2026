@@ -20,7 +20,7 @@
         <span>Documentation • built from Markdown</span>
       </div>
       <nav class="docs-nav" aria-label="Docs navigation">
-        <a href="#introduction">Introduction</a><a href="#architecture">Architecture</a><a href="#layers">Layers</a><a href="#objects">Objects</a><a href="#components">Components</a><a href="#utilities">Utilities</a><a href="#tokens-theming">Tokens &amp; Theming</a><a href="#media-container-queries">Media &amp; Container Queries</a><a href="#composition-patterns">Composition Patterns</a><a href="#lean-builds">Lean Builds</a><a href="#design-philosophy">Design Philosophy</a>
+        <a href="#introduction">Introduction</a><a href="#architecture">Architecture</a><a href="#layers">Layers</a><a href="#objects">Objects</a><a href="#components">Components</a><a href="#utilities">Utilities</a><a href="#tokens-theming">Tokens &amp; Theming</a><a href="#media-container-queries">Media &amp; Container Queries</a><a href="#composition-patterns">Composition Patterns</a><a href="#lean-builds">Lean Builds</a><a href="#design-philosophy">Design Philosophy</a><a href="#tabs-css-only">Tabs (CSS-only)</a><a href="#popup-unstyled-modal-shell">Popup (unstyled modal shell)</a>
       </nav>
     </div>
   </header>
@@ -29,6 +29,7 @@
     <section class="docs-hero" id="start">
       <div>
         <h1>Cryst4l Documentation</h1>
+        <p>Source of truth lives in <code>docs/markdown</code>. Run <code>python3 build_docs.py</code> to regenerate this page.</p>
         <div class="docs-pillrow">
           <span class="docs-pill">Pure CSS</span>
           <span class="docs-pill">ITCSS via <code>@layer</code></span>
@@ -262,7 +263,97 @@
 <li>Structure lives in **objects** and **components**</li>
 <li>Style lives in **tokens** and **utilities**</li>
 </ul>
-<p>This keeps your CSS predictable and your UI flexible.</p></section>
+<p>This keeps your CSS predictable and your UI flexible.</p></section><section id="tabs-css-only"><h1>Tabs (CSS-only)</h1>
+<p>Cryst4l includes a **CSS-only tabs** component built with **radio inputs + labels**. This gives you tab switching without JavaScript.</p>
+<blockquote><p>Note: CSS-only tabs can&#x27;t dynamically update <code>aria-selected</code>. If you need strict ARIA, add a tiny JS enhancement.</p></blockquote>
+<h2>Markup (horizontal)</h2>
+<pre><code>
+&lt;div class=&quot;c-tabs&quot; style=&quot;--tabs-active-bg: var(--surface, transparent);&quot;&gt;
+  &lt;input class=&quot;c-tabs__radio&quot; type=&quot;radio&quot; name=&quot;example&quot; id=&quot;tab-1&quot; checked&gt;
+  &lt;input class=&quot;c-tabs__radio&quot; type=&quot;radio&quot; name=&quot;example&quot; id=&quot;tab-2&quot;&gt;
+  &lt;input class=&quot;c-tabs__radio&quot; type=&quot;radio&quot; name=&quot;example&quot; id=&quot;tab-3&quot;&gt;
+
+  &lt;div class=&quot;c-tabs__list&quot; role=&quot;tablist&quot; aria-label=&quot;Example tabs&quot;&gt;
+    &lt;label class=&quot;c-tabs__tab&quot; for=&quot;tab-1&quot; role=&quot;tab&quot;&gt;Overview&lt;/label&gt;
+    &lt;label class=&quot;c-tabs__tab&quot; for=&quot;tab-2&quot; role=&quot;tab&quot;&gt;Details&lt;/label&gt;
+    &lt;label class=&quot;c-tabs__tab&quot; for=&quot;tab-3&quot; role=&quot;tab&quot;&gt;Files&lt;/label&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;c-tabs__panels&quot;&gt;
+    &lt;section class=&quot;c-tabs__panel&quot; role=&quot;tabpanel&quot;&gt;&lt;div class=&quot;c-box u-p-4 u-border&quot;&gt;Panel 1&lt;/div&gt;&lt;/section&gt;
+    &lt;section class=&quot;c-tabs__panel&quot; role=&quot;tabpanel&quot;&gt;&lt;div class=&quot;c-box u-p-4 u-border&quot;&gt;Panel 2&lt;/div&gt;&lt;/section&gt;
+    &lt;section class=&quot;c-tabs__panel&quot; role=&quot;tabpanel&quot;&gt;&lt;div class=&quot;c-box u-p-4 u-border&quot;&gt;Panel 3&lt;/div&gt;&lt;/section&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Vertical tabs</h2>
+<pre><code>
+&lt;div class=&quot;c-tabs c-tabs--vertical&quot;&gt;…&lt;/div&gt;
+</code></pre>
+<h2>Tokens you can override</h2>
+<ul>
+<li><code>--tabs-gap</code></li>
+<li><code>--tabs-pad-y</code>, <code>--tabs-pad-x</code></li>
+<li><code>--tabs-border</code></li>
+<li><code>--tabs-radius</code></li>
+<li><code>--tabs-active-bg</code>, <code>--tabs-active-fg</code></li>
+</ul></section><section id="popup-unstyled-modal-shell"><h1>Popup (unstyled modal shell)</h1>
+<p>Cryst4l includes an **unstyled popup** component (<code>c-popup</code>) that provides structural CSS for a modal:</p>
+<ul>
+<li>full-screen overlay container</li>
+<li>backdrop element</li>
+<li>dialog container with scroll handling</li>
+<li>header/body/footer hooks</li>
+<li>close hooks for your JS</li>
+</ul>
+<p>Your JavaScript should handle:</p>
+<ul>
+<li>toggling open/close</li>
+<li>focus trap</li>
+<li>ESC handling</li>
+<li>closing on click of <code>[data-popup-close]</code></li>
+</ul>
+<h2>Markup</h2>
+<pre><code>
+&lt;div class=&quot;c-popup&quot; data-popup data-open=&quot;false&quot; aria-hidden=&quot;true&quot;&gt;
+  &lt;div class=&quot;c-popup__backdrop&quot; data-popup-close&gt;&lt;/div&gt;
+
+  &lt;div class=&quot;c-popup__dialog&quot;
+       role=&quot;dialog&quot;
+       aria-modal=&quot;true&quot;
+       aria-labelledby=&quot;popup-title&quot;&gt;
+
+    &lt;header class=&quot;c-popup__header&quot;&gt;
+      &lt;h2 id=&quot;popup-title&quot; class=&quot;c-popup__title&quot;&gt;Popup title&lt;/h2&gt;
+      &lt;button class=&quot;c-popup__close c-button&quot; type=&quot;button&quot; data-popup-close aria-label=&quot;Close&quot;&gt;
+        ×
+      &lt;/button&gt;
+    &lt;/header&gt;
+
+    &lt;div class=&quot;c-popup__body&quot;&gt;
+      &lt;div class=&quot;c-box u-p-4 u-border&quot;&gt;Your content here…&lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;footer class=&quot;c-popup__footer&quot;&gt;
+      &lt;button class=&quot;c-button u-px-3 u-py-2 u-border&quot; type=&quot;button&quot; data-popup-close&gt;Close&lt;/button&gt;
+    &lt;/footer&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+<h2>Toggle (what JS should do)</h2>
+<ul>
+<li>set <code>data-open=&quot;true&quot;</code> (and <code>aria-hidden=&quot;false&quot;</code>) to show</li>
+<li>set <code>data-open=&quot;false&quot;</code> (and <code>aria-hidden=&quot;true&quot;</code>) to hide</li>
+</ul>
+<h2>Tokens you can override</h2>
+<ul>
+<li><code>--popup-z</code></li>
+<li><code>--popup-width</code></li>
+<li><code>--popup-backdrop</code></li>
+<li><code>--popup-surface</code></li>
+<li><code>--popup-gap</code></li>
+<li><code>--popup-body-gap</code></li>
+</ul></section>
 
     <footer class="docs-footer">
       <p>Built from Markdown on 2026-01-30.</p>

@@ -27,6 +27,8 @@ ORDER = [
   "09-composition.md",
   "10-lean-builds.md",
   "11-philosophy.md",
+  "12-tabs.md",
+  "13-popup.md",
 ]
 
 def md_to_html(md: str) -> str:
@@ -154,6 +156,7 @@ def main():
     <section class="docs-hero" id="start">
       <div>
         <h1>Cryst4l Documentation</h1>
+        <p>Source of truth lives in <code>docs/markdown</code>. Run <code>python3 build_docs.py</code> to regenerate this page.</p>
         <div class="docs-pillrow">
           <span class="docs-pill">Pure CSS</span>
           <span class="docs-pill">ITCSS via <code>@layer</code></span>
