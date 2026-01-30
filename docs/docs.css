@@ -50,7 +50,7 @@ a{ text-underline-offset: 0.18em; }
   border-color: var(--docs-border);
 }
 
-h1{ font-size: var(--fs-5, 2.2rem); letter-spacing: -0.02em; line-height: 1.05; margin: 3rem 0 0.6rem 0; }
+h1{ font-size: var(--fs-5, 2.4rem); letter-spacing: -0.02em; line-height: 1.05; margin: 3rem 0 0.6rem 0; }
 h2{ font-size: var(--fs-3, 1.7rem); letter-spacing: -0.01em; margin: 2.2rem 0 0.75rem; }
 h3{ font-size: var(--fs-1, 1.2rem); margin: 1.4rem 0 0.5rem; }
 p{ margin: 0.6rem 0; }

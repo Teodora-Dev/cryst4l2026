@@ -1,0 +1,66 @@
+/* -------------------------------------------------------------------------- */
+/* Popup (unstyled modal shell)                                               */
+/* Structure-first: layout + a11y-friendly hooks; no forced visual styling    */
+/*                                                                            */
+/* Recommended markup (JS toggles [data-open="true"]):                        */
+/*                                                                            */
+/* <div class="c-popup" data-popup data-open="false" aria-hidden="true">      */
+/*   <div class="c-popup__backdrop" data-popup-close></div>                   */
+/*   <div class="c-popup__dialog" role="dialog" aria-modal="true"             */
+/*        aria-labelledby="popup-title">                                      */
+/*     <header class="c-popup__header">                                       */
+/*       <h2 id="popup-title" class="c-popup__title">Title</h2>               */
+/*       <button class="c-popup__close c-button" type="button"               */
+/*               data-popup-close aria-label="Close">×</button>              */
+/*     </header>                                                              */
+/*     <div class="c-popup__body">…</div>                                     */
+/*     <footer class="c-popup__footer">…</footer>                             */
+/*   </div>                                                                   */
+/* </div>                                                                     */
+/* -------------------------------------------------------------------------- */
+
+@layer components {
+  .c-popup{
+    position: fixed;
+    inset: 0;
+    display: none;
+    z-index: var(--popup-z, 999);
+  }
+
+  .c-popup[data-open="true"]{ display: grid; }
+
+  .c-popup__backdrop{
+    position: absolute;
+    inset: 0;
+    background: var(--popup-backdrop, color-mix(in oklab, black 35%, transparent));
+  }
+
+  .c-popup__dialog{
+    position: relative;
+    margin: auto;
+    width: min(var(--popup-width, 42rem), calc(100% - (var(--space-6, 1.5rem) * 2)));
+    max-height: calc(100% - (var(--space-6, 1.5rem) * 2));
+    overflow: auto;
+    background: var(--popup-surface, transparent);
+  }
+
+  .c-popup__header,
+  .c-popup__footer{
+    display: flex;
+    align-items: center;
+    gap: var(--popup-gap, var(--space-2, .5rem));
+  }
+
+  .c-popup__header{ justify-content: space-between; }
+  .c-popup__footer{ justify-content: flex-end; }
+  .c-popup__title{ margin: 0; }
+
+  .c-popup__body{
+    margin-top: var(--popup-body-gap, var(--space-3, .75rem));
+  }
+
+  .c-popup__close{
+    line-height: 1;
+    font-size: 1.25em;
+  }
+}

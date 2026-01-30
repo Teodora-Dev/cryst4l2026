@@ -7,5 +7,7 @@
 @import url("./_5-objects/_wrappers.css") layer(objects);
 @import url("./_5-objects/_grid.css") layer(objects);
 @import url("./_6-components/_components-core.css") layer(components);
+@import url("./_6-components/_popup.css") layer(components);
+@import url("./_6-components/_tabs.css") layer(components);
 @import url("./_6-components/_components.css") layer(components);
 @import url("./_7-utilities/_utilities.css") layer(utilities);
