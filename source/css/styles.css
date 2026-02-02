@@ -1,13 +1,13 @@
 /* Cryst4l (Pure CSS, modular ITCSS via @layer) */
 @layer reset, settings, base, objects, components, utilities;
 
-@import url("./_3-resets/_normalize.css") layer(reset);
-@import url("./_1-settings/_variables.css") layer(settings);
-@import url("./_4-base/_base.css") layer(base);
-@import url("./_5-objects/_wrappers.css") layer(objects);
-@import url("./_5-objects/_grid.css") layer(objects);
-@import url("./_6-components/_components-core.css") layer(components);
-@import url("./_6-components/_popup.css") layer(components);
-@import url("./_6-components/_tabs.css") layer(components);
-@import url("./_6-components/_components.css") layer(components);
-@import url("./_7-utilities/_utilities.css") layer(utilities);
+@import url("./_1-resets/_normalize.css") layer(reset);
+@import url("./_2-settings/_variables.css") layer(settings);
+@import url("./_3-base/_base.css") layer(base);
+@import url("./_4-objects/_wrappers.css") layer(objects);
+@import url("./_4-objects/_grid.css") layer(objects);
+@import url("./_5-components/_components-core.css") layer(components);
+@import url("./_5-components/_popup.css") layer(components);
+@import url("./_5-components/_tabs.css") layer(components);
+@import url("./_5-components/_components.css") layer(components);
+@import url("./_6-utilities/_utilities.css") layer(utilities);

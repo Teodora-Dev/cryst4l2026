@@ -7,8 +7,8 @@
 .u-light{color:var(--color-light);}
 .u-white{color:#fff;}
 
-.u-bg-primary{background:var(--color-primary);}
-.u-bg-secondary{background:var(--color-secondary);}
-.u-bg-dark{background:var(--color-dark);}
-.u-bg-light{background:var(--color-light);}
-.u-bg-white{background:#fff;}
+.u-primary-bg{background:var(--color-primary);}
+.u-secondary-bg{background:var(--color-secondary);}
+.u-dark-bg{background:var(--color-dark);}
+.u-light-bg{background:var(--color-light);}
+.u-white-bg{background:#fff;}

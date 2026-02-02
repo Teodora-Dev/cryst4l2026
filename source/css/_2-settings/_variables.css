@@ -9,8 +9,8 @@
   --color-border:#d7d7d7;
 
   /* typography */
-  --font-primary: texgyreherosregular, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  --font-secondary: soleil, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --font-primary: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+  --font-secondary: system-ui, -apple-system, Segoe UI, Arial, sans-serif;
 
   --text-xxl:3.75rem; /* 60px */
   --text-xl:3rem;    /* 48px */
@@ -72,4 +72,3 @@
   --cq-md: 720px;
   --cq-lg: 920px;
 }
-
