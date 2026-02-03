@@ -1,0 +1,73 @@
+/* =========================================
+   CRYST4L — Shadow Tokens (Color-aware)
+   ========================================= */
+
+:root {
+
+    /* shadow colour source (default: neutral gray) */
+    --sh-color: #152342; /* slate-900 */
+  
+    /* convenience alpha steps */
+    --sh-a-xs: 0.05;
+    --sh-a-sm: 0.1;
+    --sh-a-md: 0.15;
+    --sh-a-lg: 0.25;
+    --sh-a-xl: 0.35;
+  
+    /* no shadow */
+    --sh-none: none;
+  
+    /* subtle elevation */
+    --sh-xs:
+      0 1px 2px 0 rgb(var(--sh-color) / var(--sh-a-xs));
+  
+    --sh-sm:
+      0 1px 3px 0 rgb(var(--sh-color) / var(--sh-a-sm)),
+      0 1px 2px -1px rgb(var(--sh-color) / var(--sh-a-sm));
+  
+    /* default UI elevation */
+    --sh-md:
+      0 4px 6px -1px rgb(var(--sh-color) / var(--sh-a-sm)),
+      0 2px 4px -2px rgb(var(--sh-color) / var(--sh-a-sm));
+  
+    --sh-lg:
+      0 10px 15px -3px rgb(var(--sh-color) / var(--sh-a-md)),
+      0 4px 6px -4px rgb(var(--sh-color) / var(--sh-a-md));
+  
+    /* pronounced */
+    --sh-xl:
+      0 20px 25px -5px rgb(var(--sh-color) / var(--sh-a-md)),
+      0 8px 10px -6px rgb(var(--sh-color) / var(--sh-a-sm));
+  
+    --sh-2xl:
+      0 25px 50px -12px rgb(var(--sh-color) / var(--sh-a-lg));
+  
+    /* inset */
+    --sh-inset:
+      inset 0 2px 4px 0 rgb(var(--sh-color) / var(--sh-a-xs));
+  
+    /* focus ring (uses same colour system) */
+    --sh-focus:
+      0 0 0 3px rgb(var(--sh-color) / 0.3);
+}
+
+  
+/* =========================================
+CRYST4L — Shadow Utilities
+========================================= */
+
+.u-sh-0     { box-shadow: var(--sh-none); }
+
+.u-sh-xs    { box-shadow: var(--sh-xs); }
+.u-sh-sm    { box-shadow: var(--sh-sm); }
+.u-sh-md    { box-shadow: var(--sh-md); }
+.u-sh-lg    { box-shadow: var(--sh-lg); }
+.u-sh-xl    { box-shadow: var(--sh-xl); }
+.u-sh-2xl   { box-shadow: var(--sh-2xl); }
+
+.u-sh-inset { box-shadow: var(--sh-inset); }
+.u-sh-focus { box-shadow: var(--sh-focus); }
+
+.u-sh-glow-sm { box-shadow: var(--sh-glow-sm); }
+.u-sh-glow-md { box-shadow: var(--sh-glow-md); }
+.u-sh-glow-lg { box-shadow: var(--sh-glow-lg); }

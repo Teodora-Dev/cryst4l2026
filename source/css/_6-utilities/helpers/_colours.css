@@ -12,3 +12,11 @@
 .u-dark-bg{background:var(--color-dark);}
 .u-light-bg{background:var(--color-light);}
 .u-white-bg{background:#fff;}
+
+.u-error-colour { color: rgb(238, 33, 33); }
+.u-warning-colour { color: gold; }
+.u-success-color { color: rgb(41, 186, 41); }
+
+.u-error-bg { background-color: rgb(238, 33, 33); }
+.u-warning-bg { background-color: gold; }
+.u-success-bg { background-color: rgb(41, 186, 41); }

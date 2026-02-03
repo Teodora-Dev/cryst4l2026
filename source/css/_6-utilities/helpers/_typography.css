@@ -1,21 +1,128 @@
-/* Typography utilities (optional)
-   Uses the fluid scale tokens from _1-settings/_variables.css
-*/
+/* ==========================================================================
+   Typography Utilities
+   Uses fluid type & spacing tokens from:
+   _1-settings/_variables.css
+   ========================================================================== */
 
-.u-fs--2{ font-size: var(--fs--2) !important; }
-.u-fs--1{ font-size: var(--fs--1) !important; }
-.u-fs-0{  font-size: var(--fs-0)  !important; }
-.u-fs-1{  font-size: var(--fs-1)  !important; }
-.u-fs-2{  font-size: var(--fs-2)  !important; }
-.u-fs-3{  font-size: var(--fs-3)  !important; }
-.u-fs-4{  font-size: var(--fs-4)  !important; }
-.u-fs-5{  font-size: var(--fs-5)  !important; }
+/* --------------------------------------------------------------------------
+   Font sizes (fluid scale)
+   -------------------------------------------------------------------------- */
 
-/* Line-height helpers */
-.u-lh-tight{ line-height: 1.15 !important; }
-.u-lh-snug{  line-height: 1.30 !important; }
-.u-lh-normal{line-height: 1.50 !important; }
-.u-lh-relaxed{line-height: 1.70 !important; }
-
-/* A nice default "flow" rhythm for rich text blocks */
-.u-flow > * + *{ margin-block-start: var(--space-3) !important; }
+   .u-fs--2{ font-size: var(--fs--2) !important; }
+   .u-fs--1{ font-size: var(--fs--1) !important; }
+   .u-fs-0{  font-size: var(--fs-0)  !important; }
+   .u-fs-1{  font-size: var(--fs-1)  !important; }
+   .u-fs-2{  font-size: var(--fs-2)  !important; }
+   .u-fs-3{  font-size: var(--fs-3)  !important; }
+   .u-fs-4{  font-size: var(--fs-4)  !important; }
+   .u-fs-5{  font-size: var(--fs-5)  !important; }
+   
+   /* --------------------------------------------------------------------------
+      Font weight
+      -------------------------------------------------------------------------- */
+   
+   .u-fw-thin{      font-weight: 100 !important; }
+   .u-fw-light{     font-weight: 300 !important; }
+   .u-fw-regular{   font-weight: 400 !important; }
+   .u-fw-medium{    font-weight: 500 !important; }
+   .u-fw-semibold{  font-weight: 600 !important; }
+   .u-fw-bold{      font-weight: 700 !important; }
+   .u-fw-extrabold{ font-weight: 800 !important; }
+   
+   /* --------------------------------------------------------------------------
+      Font style & decoration
+      -------------------------------------------------------------------------- */
+   
+   .u-italic{     font-style: italic !important; }
+   .u-not-italic{ font-style: normal !important; }
+   
+   .u-underline{     text-decoration: underline !important; }
+   .u-line-through{ text-decoration: line-through !important; }
+   .u-no-underline{ text-decoration: none !important; }
+   
+   /* --------------------------------------------------------------------------
+      Text transform
+      -------------------------------------------------------------------------- */
+   
+   .u-uppercase{    text-transform: uppercase !important; }
+   .u-lowercase{    text-transform: lowercase !important; }
+   .u-capitalize{  text-transform: capitalize !important; }
+   .u-no-transform{ text-transform: none !important; }
+   
+   /* --------------------------------------------------------------------------
+      Line height
+      -------------------------------------------------------------------------- */
+   
+   .u-lh-tight{    line-height: 1.15 !important; }
+   .u-lh-snug{     line-height: 1.30 !important; }
+   .u-lh-normal{   line-height: 1.50 !important; }
+   .u-lh-relaxed{  line-height: 1.70 !important; }
+   
+   /* --------------------------------------------------------------------------
+      Letter spacing (tracking)
+      -------------------------------------------------------------------------- */
+   
+   .u-tracking-tight{   letter-spacing: -0.02em !important; }
+   .u-tracking-normal{ letter-spacing:  0em    !important; }
+   .u-tracking-wide{   letter-spacing:  0.05em !important; }
+   .u-tracking-wider{  letter-spacing:  0.1em  !important; }
+   
+   /* --------------------------------------------------------------------------
+      Text alignment
+      -------------------------------------------------------------------------- */
+   
+   .u-text-left{    text-align: left !important; }
+   .u-text-center{  text-align: center !important; }
+   .u-text-right{   text-align: right !important; }
+   .u-text-justify{ text-align: justify !important; }
+   
+   /* --------------------------------------------------------------------------
+      Wrapping & overflow
+      -------------------------------------------------------------------------- */
+   
+   .u-text-nowrap{ white-space: nowrap !important; }
+   .u-text-wrap{   white-space: normal !important; }
+   
+   .u-text-truncate{
+     overflow: hidden !important;
+     text-overflow: ellipsis !important;
+     white-space: nowrap !important;
+   }
+   
+   /* --------------------------------------------------------------------------
+      Rendering & smoothing
+      -------------------------------------------------------------------------- */
+   
+   .u-text-antialiased{
+     -webkit-font-smoothing: antialiased !important;
+     -moz-osx-font-smoothing: grayscale !important;
+   }
+   
+   .u-text-subpixel{
+     -webkit-font-smoothing: auto !important;
+     -moz-osx-font-smoothing: auto !important;
+   }
+   
+   /* --------------------------------------------------------------------------
+      Rich text helpers
+      -------------------------------------------------------------------------- */
+   
+   .u-flow > * + *{
+     margin-block-start: var(--space-3) !important;
+   }
+   
+   .u-prose{
+     max-width: 65ch;
+   }
+   
+   .u-prose-wide{
+     max-width: 80ch;
+   }
+   
+   /* --------------------------------------------------------------------------
+      Tone helpers (non-semantic)
+      -------------------------------------------------------------------------- */
+   
+   .u-text-muted{ opacity: 0.7; }
+   .u-text-quiet{ opacity: 0.5; }
+   

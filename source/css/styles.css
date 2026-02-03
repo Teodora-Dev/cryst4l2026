@@ -9,5 +9,5 @@
 @import url("./_5-components/_components-core.css") layer(components);
 @import url("./_5-components/_popup.css") layer(components);
 @import url("./_5-components/_tabs.css") layer(components);
-@import url("./_5-components/_components.css") layer(components);
+@import url("./_5-components/_table.css") layer(components);
 @import url("./_6-utilities/_utilities.css") layer(utilities);

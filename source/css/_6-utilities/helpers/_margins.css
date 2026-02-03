@@ -25,6 +25,21 @@
 .u-no-margin--left\@xt-up{margin-left:0!important;}
 }
 
+@media (max-width:320px){
+    .u-margin\@xt-down{margin:var(--space-1);}
+    .u-margin--top\@xt-down{margin-top:var(--space-1);}
+    .u-margin--right\@xt-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@xt-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@xt-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@xt-down{margin:0!important;}
+    .u-no-margin--top\@xt-down{margin-top:0!important;}
+    .u-no-margin--right\@xt-down{margin-right:0!important;}
+    .u-no-margin--bottom\@xt-down{margin-bottom:0!important;}
+    .u-no-margin--left\@xt-down{margin-left:0!important;}
+  }
+  
+
 @media (min-width:481px){
 .u-margin\@xs-up{margin:var(--space-1);}
 .u-margin--top\@xs-up{margin-top:var(--space-1);}
@@ -37,6 +52,21 @@
 .u-no-margin--bottom\@xs-up{margin-bottom:0!important;}
 .u-no-margin--left\@xs-up{margin-left:0!important;}
 }
+
+@media (max-width:480px){
+    .u-margin\@xs-down{margin:var(--space-1);}
+    .u-margin--top\@xs-down{margin-top:var(--space-1);}
+    .u-margin--right\@xs-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@xs-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@xs-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@xs-down{margin:0!important;}
+    .u-no-margin--top\@xs-down{margin-top:0!important;}
+    .u-no-margin--right\@xs-down{margin-right:0!important;}
+    .u-no-margin--bottom\@xs-down{margin-bottom:0!important;}
+    .u-no-margin--left\@xs-down{margin-left:0!important;}
+  }
+  
 
 @media (min-width:641px){
 .u-margin\@sl-up{margin:var(--space-1);}
@@ -51,6 +81,21 @@
 .u-no-margin--left\@sl-up{margin-left:0!important;}
 }
 
+@media (max-width:640px){
+    .u-margin\@sl-down{margin:var(--space-1);}
+    .u-margin--top\@sl-down{margin-top:var(--space-1);}
+    .u-margin--right\@sl-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@sl-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@sl-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@sl-down{margin:0!important;}
+    .u-no-margin--top\@sl-down{margin-top:0!important;}
+    .u-no-margin--right\@sl-down{margin-right:0!important;}
+    .u-no-margin--bottom\@sl-down{margin-bottom:0!important;}
+    .u-no-margin--left\@sl-down{margin-left:0!important;}
+  }
+  
+
 @media (min-width:769px){
 .u-margin\@sm-up{margin:var(--space-1);}
 .u-margin--top\@sm-up{margin-top:var(--space-1);}
@@ -63,6 +108,21 @@
 .u-no-margin--bottom\@sm-up{margin-bottom:0!important;}
 .u-no-margin--left\@sm-up{margin-left:0!important;}
 }
+
+@media (max-width:768px){
+    .u-margin\@sm-down{margin:var(--space-1);}
+    .u-margin--top\@sm-down{margin-top:var(--space-1);}
+    .u-margin--right\@sm-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@sm-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@sm-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@sm-down{margin:0!important;}
+    .u-no-margin--top\@sm-down{margin-top:0!important;}
+    .u-no-margin--right\@sm-down{margin-right:0!important;}
+    .u-no-margin--bottom\@sm-down{margin-bottom:0!important;}
+    .u-no-margin--left\@sm-down{margin-left:0!important;}
+  }
+  
 
 @media (min-width:981px){
 .u-margin\@md-up{margin:var(--space-1);}
@@ -77,6 +137,21 @@
 .u-no-margin--left\@md-up{margin-left:0!important;}
 }
 
+@media (max-width:980px){
+    .u-margin\@md-down{margin:var(--space-1);}
+    .u-margin--top\@md-down{margin-top:var(--space-1);}
+    .u-margin--right\@md-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@md-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@md-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@md-down{margin:0!important;}
+    .u-no-margin--top\@md-down{margin-top:0!important;}
+    .u-no-margin--right\@md-down{margin-right:0!important;}
+    .u-no-margin--bottom\@md-down{margin-bottom:0!important;}
+    .u-no-margin--left\@md-down{margin-left:0!important;}
+  }
+  
+
 @media (min-width:1171px){
 .u-margin\@lg-up{margin:var(--space-1);}
 .u-margin--top\@lg-up{margin-top:var(--space-1);}
@@ -89,3 +164,18 @@
 .u-no-margin--bottom\@lg-up{margin-bottom:0!important;}
 .u-no-margin--left\@lg-up{margin-left:0!important;}
 }
+
+@media (max-width:1170px){
+    .u-margin\@lg-down{margin:var(--space-1);}
+    .u-margin--top\@lg-down{margin-top:var(--space-1);}
+    .u-margin--right\@lg-down{margin-right:var(--space-1);}
+    .u-margin--bottom\@lg-down{margin-bottom:var(--space-1);}
+    .u-margin--left\@lg-down{margin-left:var(--space-1);}
+  
+    .u-no-margin\@lg-down{margin:0!important;}
+    .u-no-margin--top\@lg-down{margin-top:0!important;}
+    .u-no-margin--right\@lg-down{margin-right:0!important;}
+    .u-no-margin--bottom\@lg-down{margin-bottom:0!important;}
+    .u-no-margin--left\@lg-down{margin-left:0!important;}
+  }
+  

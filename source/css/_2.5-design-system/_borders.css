@@ -1,0 +1,48 @@
+/* =========================================
+   CRYST4L — Border Color Tokens
+   ========================================= */
+
+:root {
+
+/* border colour source (default: slate-300-ish) */
+--bd-color: 203 213 225; /* slate-300 */
+
+/* opacity / intensity steps */
+--bd-a-subtle: 0.4;
+--bd-a-soft:   0.6;
+--bd-a-mid:    0.8;
+--bd-a-strong: 1;
+
+/* semantic border colors */
+--bd-subtle: rgb(var(--bd-color) / var(--bd-a-subtle));
+--bd-soft:   rgb(var(--bd-color) / var(--bd-a-soft));
+--bd-mid:    rgb(var(--bd-color) / var(--bd-a-mid));
+--bd-strong: rgb(var(--bd-color) / var(--bd-a-strong));
+
+/* special cases */
+--bd-none: transparent;
+}
+
+/* =========================================
+   CRYST4L — Border Utilities
+   ========================================= */
+
+/* width */
+.u-bd-0 { border-width: 0 !important; }
+.u-bd-1 { border-width: 1px; }
+.u-bd-2 { border-width: 2px; }
+.u-bd-3 { border-width: 3px; }
+
+/* colour */
+.u-bd-subtle { border-color: var(--bd-subtle); }
+.u-bd-soft   { border-color: var(--bd-soft); }
+.u-bd-mid    { border-color: var(--bd-mid); }
+.u-bd-strong { border-color: var(--bd-strong); }
+.u-bd-none   { border-color: var(--bd-none); }
+
+/* style */
+.u-bd-solid  { border-style: solid; }
+.u-bd-dashed { border-style: dashed; }
+.u-bd-dotted { border-style: dotted; }
+
+  

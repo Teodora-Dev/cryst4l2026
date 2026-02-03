@@ -1,0 +1,82 @@
+/* =========================================================
+   Table (c-table)
+   Mostly unstyled, with a few sane defaults:
+   - predictable spacing
+   - optional scroll wrapper
+   - optional modifiers for borders/zebra/compact
+========================================================= */
+
+.c-table-wrap {
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    max-width: 100%;
+  }
+  
+  .c-table {
+    width: 100%;
+    border-collapse: collapse; /* consistent layout */
+    border-spacing: 0;
+  }
+  
+  .c-table__caption {
+    text-align: left;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Keep these intentionally light */
+  .c-table__th,
+  .c-table__td {
+    padding: 0.5rem 0.75rem;
+    text-align: left;
+    vertical-align: top;
+  }
+  
+  .c-table__th {
+    font-weight: 600;
+  }
+  
+  /* Make header visually consistent, but not “designed” */
+  .c-table__head .c-table__th {
+    vertical-align: bottom;
+  }
+  
+  /* Optional: alignment helpers */
+  .c-table--right .c-table__th,
+  .c-table--right .c-table__td { text-align: right; }
+  
+  .c-table--center .c-table__th,
+  .c-table--center .c-table__td { text-align: center; }
+  
+  /* =========================================================
+     Optional modifiers (use only if you want them)
+  ========================================================= */
+  
+  .c-table--borders .c-table__th,
+  .c-table--borders .c-table__td {
+    border-bottom: 1px solid currentColor;
+    border-bottom-color: rgba(0,0,0,0.15);
+  }
+  
+  .c-table--zebra .c-table__body .c-table__row:nth-child(even) .c-table__td,
+  .c-table--zebra .c-table__body .c-table__row:nth-child(even) .c-table__th {
+    background: rgba(0,0,0,0.03);
+  }
+  
+  .c-table--compact .c-table__th,
+  .c-table--compact .c-table__td {
+    padding: 0.35rem 0.5rem;
+  }
+  
+  /* Useful when you want columns to size predictably */
+  .c-table--fixed {
+    table-layout: fixed;
+  }
+  
+  /* If your table has long strings */
+  .c-table--truncate .c-table__th,
+  .c-table--truncate .c-table__td {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  

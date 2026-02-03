@@ -1,0 +1,75 @@
+/* =========================================
+   CRYST4L — Border Radius Tokens
+   ========================================= */
+
+:root {
+
+  /* no rounding */
+  --r-none: 0;
+
+  /* subtle */
+  --r-xxs: 0.125rem;  /* 2px */
+  --r-xs:  0.25rem;   /* 4px */
+  --r-sm:  0.375rem;  /* 6px */
+
+  /* default UI rounding */
+  --r-md:  0.5rem;    /* 8px */
+  --r-lg:  0.75rem;   /* 12px */
+  --r-xl:  1rem;      /* 16px */
+
+  /* expressive / cards */
+  --r-2xl: 1.5rem;    /* 24px */
+  --r-3xl: 2rem;      /* 32px */
+
+  /* extreme / playful */
+  --r-4xl: 3rem;      /* 48px */
+
+  /* special */
+  --r-pill: 9999px;   /* always pill */
+  --r-round: 50%;     /* circle if square */
+}
+
+/* =========================================
+   CRYST4L — Border Radius Utilities
+   ========================================= */
+
+.u-r-0    { border-radius: var(--r-none); }
+
+.u-r-xxs  { border-radius: var(--r-xxs); }
+.u-r-xs   { border-radius: var(--r-xs); }
+.u-r-sm   { border-radius: var(--r-sm); }
+.u-r-md   { border-radius: var(--r-md); }
+.u-r-lg   { border-radius: var(--r-lg); }
+.u-r-xl   { border-radius: var(--r-xl); }
+.u-r-2xl  { border-radius: var(--r-2xl); }
+.u-r-3xl  { border-radius: var(--r-3xl); }
+.u-r-4xl  { border-radius: var(--r-4xl); }
+
+/* special shapes */
+.u-r-pill  { border-radius: var(--r-pill); }
+.u-r-round { border-radius: var(--r-round); }
+
+/* top only */
+.u-rt-md {
+    border-top-left-radius: var(--r-md);
+    border-top-right-radius: var(--r-md);
+  }
+  
+/* bottom only */
+.u-rb-md {
+border-bottom-left-radius: var(--r-md);
+border-bottom-right-radius: var(--r-md);
+}
+
+/* left / right */
+.u-rl-md {
+border-top-left-radius: var(--r-md);
+border-bottom-left-radius: var(--r-md);
+}
+
+.u-rr-md {
+border-top-right-radius: var(--r-md);
+border-bottom-right-radius: var(--r-md);
+}
+  
+   
