@@ -3,6 +3,7 @@
 
 @import url("./_1-resets/_normalize.css") layer(reset);
 @import url("./_2-settings/_variables.css") layer(settings);
+@import url("./_2.5-design-system/_design-system.css") layer(settings);
 @import url("./_3-base/_base.css") layer(base);
 @import url("./_4-objects/_wrappers.css") layer(objects);
 @import url("./_4-objects/_grid.css") layer(objects);
